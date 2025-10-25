@@ -3,7 +3,7 @@
   --muted:#1a2027;     /*ngjyra e cards*/    
   --text:#e9edf1;      /*ngjyra e pare 1 shkrimeve*/  
   --sub:#b8c0cc;       /*ngjyra e linqeve e shkrimeve*/
-  --gold:#caa66a;      /*ngjyra e butoneve*/
+  --gold:#C6A664;      /*ngjyra e butoneve*/
   --border:#2a323d;    /*ngjyra e bordeers perreth */
   --radius:14px;
 }
@@ -31,9 +31,10 @@ body{
   z-index:50;
   background:linear-gradient(180deg, rgba(15,19,23,.9), rgba(15,19,23,.6));
   border-bottom:1px solid var(--border);
+  padding: 5px 0px;
 }
-.navbar .inner{
-  height:90px;
+.navbar .inner-container{
+  height:100px;
   display:flex; 
   align-items:center; 
   justify-content:space-between; 
@@ -45,34 +46,38 @@ body{
   gap:12px;
   width: 130px;                
   height: 90px;
-  background: url("Logo.png") center/contain no-repeat;
+  margin-left: 5%;
 }
-.nav{
-  display:flex; 
-  align-items:center;
-  gap:26px
+.navbar .inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav a{
-  color:var(--sub); 
-  text-decoration:none; 
-  font-weight:500; 
-  padding:8px 2px; 
-  position:relative;
+.nav {
+  display: flex;
+  gap: 26px;
+  margin-right: 20px; 
 }
-.nav a:hover{
-  color:var(--text)
+
+.nav a {
+  color: var(--sub);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 25px;
+  position: relative;
 }
-.nav a.active{
-  color:var(--text)
+.nav a:hover,
+.nav a.active {
+  color: var(--text);
 }
-.nav a.active::after{
-  content:""; 
-  position:absolute; 
-  left:0; 
-  right:0; 
-  bottom:-14px; 
-  height:2px; 
-  background:#fff;
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 2px;
+  background: #fff;
 }
 .btn1{
   background:var(--gold); 
@@ -92,10 +97,10 @@ body{
   position:relative; 
   isolation:isolate;
   background: linear-gradient(180deg, rgba(15,19,23,.5), rgba(15,19,23,.85)),
-    url("img/FirstPic.jpg") center/cover no-repeat;
+    url("img/intro.jpg") center/cover no-repeat;
 }
 .FirstPart .wrap{
-  padding:110px 0 120px;
+  padding:130px 0 120px;
 }
 .FirstPart h1{
   font-family:"Playfair Display", serif;
@@ -137,66 +142,35 @@ body{
   color:var(--sub); 
   margin:0
 }
-.homes{
+.homes {
   display: flex;
-  flex-wrap: wrap;   
-  gap: 22px;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.homes .card{
-  width: 32%;
+
+.card {
+  width: 45%;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.card{
-  background:var(--muted); 
-  border:1px solid var(--border); 
-  border-radius:var(--radius); 
-  overflow:hidden;
+
+.card:hover {
+  transform: scale(1.03);
 }
-.card .foto{
-  aspect-ratio: 16/10; 
-  background:#222 center/cover no-repeat;
-}
-.card .body{
-  padding:16px 16px 18px;
-}
-.card .intro{
-  display:flex; 
-  justify-content:space-between; 
-  align-items:center; 
-  margin-bottom:10px; 
-  color:var(--sub); 
-  font-size:14px;
-}
-.card h3{
-  margin:6px 0 8px; 
-  font-family:"Playfair Display", serif; 
-  font-size:20px;
-}
-.stars{
-  color:#ffcc66; 
-  letter-spacing:2px;
-}
-.card .actions{
-  display:flex; 
-  justify-content:space-between; 
-  align-items:center; 
-  gap:10px; 
-  margin-top:10px;
-}
-.card .location{
-  color:#d9e1ee; 
-  font-weight:700
-}
-.card .btn{
-  background:transparent; 
-  border:1px solid var(--gold); 
-  color:var(--gold); 
-  padding:8px 12px; 
-  border-radius:10px; 
-  cursor:pointer; 
-  font-weight:600;
-}
-.card .btn:hover{
-  background:rgba(202,166,106,.1);
+.foto{
+                height:300px; 
+                background-size:cover; 
+                background-position:center;
+                display:flex; 
+                align-items:center; 
+                justify-content:center; 
+                color:white; 
+                font-size:2rem; 
+                font-weight:bold;
+                text-shadow:0 2px 8px rgba(0,0,0,0.6);
+                border-radius:12px;
 }
 /* Qetu o pjesa pershkruse edhe lokacioni */
 .thirdPart{
