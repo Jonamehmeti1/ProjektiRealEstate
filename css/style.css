@@ -97,7 +97,7 @@ body{
   position:relative; 
   isolation:isolate;
   background: linear-gradient(180deg, rgba(15,19,23,.5), rgba(15,19,23,.85)),
-    url("img/intro.jpg") center/cover no-repeat;
+    url("../img/intro.jpg") center/cover no-repeat;
 }
 .FirstPart .wrap{
   padding:130px 0 120px;
