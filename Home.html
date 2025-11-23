@@ -17,7 +17,13 @@
       <nav class="nav">
         <a href="Home.html" class="active">Home</a>
         <a href="AboutUs.html">About Us</a>
-        <a href="Services.html">Services</a>
+        <div class="dropdown">
+          <a  class="dropdown-toggle">Services </a>
+          <div class="dropdown-menu">
+            <a href="Rent.html">Rent</a>
+            <a href="Sale.html">Sale</a>
+          </div>
+        </div>
       </nav>
       <button class="btn1">
         <a href="LoginRegister.html">Log In</a>
@@ -47,15 +53,13 @@
 
   <div class="homes">
   <article class="card">
-    <div class="foto"  style="background-image:url('img/rent.jpg');"><a href="#" style="text-decoration: none; color: white;">Rent</a></div>
+    <div class="foto"  style="background-image:url('img/rent.jpg');"><a href="Rent.html" style="text-decoration: none; color: white;">Rent</a></div>
   </article>
 <!--Qeto linqe duhet mee i zevendsu me emrin e actual pages -->
     <article class="card">
-    <div class="foto"  style="background-image:url('img/buy-sale.jpg');"><a href="#" style="text-decoration: none; color: white;">Buy/Sale</a> </div>
+    <div class="foto"  style="background-image:url('img/buy-sale.jpg');"><a href="Sale.html" style="text-decoration: none; color: white;">Buy/Sale</a> </div>
   </article>
 </div>
-
-
   <!-- Third Part -->
   <div class="thirdPart">
     <div class="lokacioni img"> <iframe
@@ -90,28 +94,52 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container" >
+  <div class="container">
     <div class="cols">
+
       <div>
-        <a href="Home.html"><span class="logo" aria-hidden="true"></span><span>MiCasa</span></a>
-        <p style="margin:12px 0 0; max-width:380px">Experience excellence in every detail. From luxury estates to family homes, we connect people to the places they’ll love to call home.</p>
+        <a href="Home.html">MiCasa</a>
+        <p style="margin:12px 0 0; max-width:380px">
+          Experience excellence in every detail. From luxury estates to family homes,
+          we connect people to the places they’ll love to call home.
+        </p>
       </div>
-    
+
       <div>
-        <h4 style="margin:0 0 10%">Support</h4>
+        <h4>Support</h4>
         <div><a href="#">Contact</a></div>
         <div><a href="#">FAQs</a></div>
         <div><a href="#">Policy</a></div>
+        <div><a href="#">Terms of Service</a></div>
       </div>
+
+
       <div>
-        <h4 style="margin:0 0 10px">Find Us</h4>
-        <div>Prishtine, KOSOVO</div>
-        <div>+383 12 345667</div>
-        <div>hello@MiCasa.com</div>
+        <h4>Company</h4>
+        <div><a href="#">About Us</a></div>
+        <div><a href="#">Our Agents</a></div>
+        <div><a href="#">Careers</a></div>
+        <div><a href="#">Blog</a></div>
       </div>
+
+      <div>
+        <h4>Find Us</h4>
+        <div class="info">Prishtine, KOSOVO</div>
+        <div class="info">+383 12 345 667</div>
+        <div class="info">hello@MiCasa.com</div>
+
+      </div>
+
     </div>
+
+    <div class="footer-bottom">
+      © 2025 MiCasa. All Rights Reserved.
+    </div>
+
   </div>
 </footer>
+
+
 
 </body>
 </html>
