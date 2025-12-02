@@ -1,0 +1,53 @@
+:root {
+  --bg:#0f1317;
+  --muted:#1a2027;
+  --text:#e9edf1;
+  --sub:#b8c0cc;
+  --gold:#caa66a;
+  --border:#2a323d;
+  --radius:14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: var(--muted);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 55px;
+  height: auto;
+}
+
+.logo span {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
