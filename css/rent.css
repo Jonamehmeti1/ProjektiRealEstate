@@ -126,7 +126,7 @@ body {
 
 .box {
   background: var(--muted);
-  padding: 20px 40px 05px 50px;
+  padding: 20px 40px 05px 30px;
   border-radius: var(--radius);
   width: 900px;
   text-align: top center;
@@ -136,8 +136,8 @@ body {
 }
 
 .box-img {
-  width: 335px;
-  height: 285px;
+  width: 355px;
+  height: 255px;
   border-radius: var(--radius);
   background-size: cover;
   background-position: center;
@@ -149,13 +149,25 @@ body {
 }
 
 .box1 .box-img {
-  background-image: url("img/SH1.jpg");
+  background-image: url("../img/H1.jpg");
 }
 .box2 .box-img {
-  background-image: url("img/SH2.jpg");
+  background-image: url("../img/H2.jpg");
 }
 .box3 .box-img {
-  background-image: url("img/SH3.jpg");
+  background-image: url("../img/H3.jpg");
+}
+.box:hover {
+  transform: scale(1.15);
+}
+.box4 .box-img {
+  background-image: url("../img/H6.jpg");
+}
+.box5 .box-img {
+  background-image: url("../img/H7.jpg");
+}
+.box6 .box-img {
+  background-image: url("../img/H8.jpg");
 }
 
 .footer {
