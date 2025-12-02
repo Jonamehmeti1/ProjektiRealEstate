@@ -323,9 +323,12 @@ body{
   .nav{display:none} 
   .rooms{grid-template-columns:1fr}
 }
+<<<<<<< HEAD:css/style.css
 @media (max-width: 700px) {
   .footer .cols {
     flex-direction: column;
     gap: 36px;
   }
 }
+=======
+>>>>>>> 853fbec (Sales CSS):style.css
