@@ -190,13 +190,22 @@ body {
   background-image: url("../img/H11.jpg");
 }
 .box10 .box-img {
-  background-image: url("../img/H6.jpg");
+  background-image: url("../img/H16.jpg");
 }
 .box11 .box-img {
-  background-image: url("../img/H7.jpg");
+  background-image: url("../img/H17.jpg");
 }
 .box12 .box-img {
-  background-image: url("../img/H8.jpg");
+  background-image: url("../img/H12.jpg");
+}
+.box13 .box-img {
+  background-image: url("../img/H13.jpg");
+}
+.box14 .box-img {
+  background-image: url("../img/H14.jpg");
+}
+.box15 .box-img {
+  background-image: url("../img/H15.jpg");
 
 }
 .footer {
