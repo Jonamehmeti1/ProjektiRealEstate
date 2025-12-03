@@ -147,7 +147,6 @@ body {
 .box:hover {
   transform: scale(1.15);
 }
-
 .box1 .box-img {
   background-image: url("../img/H1.jpg");
 }
@@ -156,9 +155,6 @@ body {
 }
 .box3 .box-img {
   background-image: url("../img/H3.jpg");
-}
-.box:hover {
-  transform: scale(1.15);
 }
 .box4 .box-img {
   background-image: url("../img/H6.jpg");
@@ -169,7 +165,24 @@ body {
 .box6 .box-img {
   background-image: url("../img/H8.jpg");
 }
-
+.box7 .box-img {
+  background-image: url("../img/H9.jpg");
+}
+.box8 .box-img {
+  background-image: url("../img/H10.jpg");
+}
+.box9 .box-img {
+  background-image: url("../img/H11.jpg");
+}
+.box10 .box-img {
+  background-image: url("../img/H6.jpg");
+}
+.box11 .box-img {
+  background-image: url("../img/H7.jpg");
+}
+.box12 .box-img {
+  background-image: url("../img/H8.jpg");
+}
 .footer {
   margin-top: 70px;
   padding: 36px 0 60px;
