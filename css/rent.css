@@ -1,7 +1,7 @@
 :root {
   --bg: #0f1317; /*ngjyra e background*/
   --muted: #1a2027; /*ngjyra e cards*/
-  --text: #e9edf1; /*ngjyra e pare 1 shkrimeve*/
+  --text:  #c6a664; /*ngjyra e pare 1 shkrimeve*/
   --sub: #b8c0cc; /*ngjyra e linqeve e shkrimeve*/
   --gold: #c6a664; /*ngjyra e butoneve*/
   --border: #2a323d; /*ngjyra e bordeers perreth */
@@ -17,7 +17,7 @@ body {
   font-family: Inter, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.10;
 }
 
 .container {
@@ -87,14 +87,18 @@ body {
     rgba(15, 19, 23, 0.5),
     rgba(15, 19, 23, 0.85)
   );
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
+}
+.hero:hover {
+  transform: scale(0.99);
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(100px, 4vw, 48px);
   margin: 0 0 12px;
+   
 }
 
 .hero p {
@@ -114,6 +118,17 @@ body {
   text-shadow: 0 2px 10px rgba(89, 208, 212, 0.6);
   border-radius: 25px;
   box-shadow: 0 10px 20px rgb(192, 192, 192);
+
+
+}
+.hero h1 {
+  color: var(--gold) !important;
+}
+.box,
+.box h1,
+.box h3,
+.box p {
+  color: #ffffff !important;
 }
 
 .boxes {
@@ -145,7 +160,7 @@ body {
 }
 
 .box:hover {
-  transform: scale(1.15);
+  transform: scale(1.03);
 }
 .box1 .box-img {
   background-image: url("../img/H1.jpg");
@@ -182,6 +197,7 @@ body {
 }
 .box12 .box-img {
   background-image: url("../img/H8.jpg");
+
 }
 .footer {
   margin-top: 70px;
