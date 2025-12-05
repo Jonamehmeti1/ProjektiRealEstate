@@ -219,6 +219,42 @@ body{
   text-decoration: none;
   color:#111; 
 }
+
+.nav .dropdown {
+  position: relative;
+}
+
+.nav .dropdown-toggle {
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg, #111); 
+  border: 1px solid var(--border);
+  min-width: 120px;
+  padding: 6px 0;
+  display: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--sub);
+  font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
     .intro {
       background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       height: 65vh;
