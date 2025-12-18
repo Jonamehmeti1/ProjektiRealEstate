@@ -324,6 +324,7 @@ body{
   .rooms{grid-template-columns:1fr}
 }
 <<<<<<< HEAD:css/style.css
+<<<<<<< HEAD:css/style.css
 @media (max-width: 700px) {
   .footer .cols {
     flex-direction: column;
@@ -332,3 +333,5 @@ body{
 }
 =======
 >>>>>>> 853fbec (Sales CSS):style.css
+=======
+>>>>>>> fa2a8c5091002411929dbb63ba27f0aa78530f65:style.css
