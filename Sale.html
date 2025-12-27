@@ -27,10 +27,21 @@
   </div>
 </header>
      <!-- HERO -->
-    <header class="hero">
-        <h1>Find Your Perfect Home</h1>
-        <p>Premium listings crafted for luxury, comfort, and modern living.</p>
+    <header class="hero-slider">
+  <div class="hero-slide active" style="background-image:url('img/House\(13\).jpg')"></div>
+  <div class="hero-slide" style="background-image:url('img/House\(7\).jpg')"></div>
+  <div class="hero-slide" style="background-image:url('img/House\(10\).jpg')"></div>
+<div class="hero-slide" style="background-image:url('img/House\(11\).jpg')"></div>
+<div class="hero-slide" style="background-image:url('img/House\(12\).jpg')"></div>
+<div class="hero-slide" style="background-image:url('img/House\(14\).jpg')"></div>
 
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Find Your Perfect Home</h1>
+    <p>Premium listings crafted for luxury, comfort, and modern living.</p>
+    <button class="btn">Explore Properties</button>
+  </div>
     </header>
 
     <!-- PROPERTIES -->
@@ -206,5 +217,16 @@
 
   </div>
 </footer>
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, 3000); 
+</script>
+
     </body>
     </html>
