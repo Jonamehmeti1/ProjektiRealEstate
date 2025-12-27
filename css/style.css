@@ -279,6 +279,12 @@ body{
   font-size: 14px;
 }
 
+#results {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* FOOTER qeta e kem krejt njejt */
 .footer {
   border-top: 1px solid var(--border);

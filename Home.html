@@ -4,20 +4,23 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MiCasa</title>
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body class="dark-theme">
 
 <header class="navbar">
   <div class="inner-container">
-   <a href="Home.html"> <img class="logo" src="logo.png" alt="Logo"></a>
+    <a href="Home.html"><img class="logo" src="logo.png" alt="Logo"></a>
 
-    <div style="display: flex; align-items: center; margin-right:2%;">
+    <div style="display:flex; align-items:center; margin-right:2%;">
       <nav class="nav">
         <a href="Home.html" class="active">Home</a>
         <a href="AboutUs.html">About Us</a>
+
         <div class="dropdown">
           <a class="dropdown-toggle">Services </a>
           <div class="dropdown-menu">
@@ -26,6 +29,7 @@
           </div>
         </div>
       </nav>
+
       <button class="btn1">
         <a href="LoginRegister.html">Log In</a>
       </button>
@@ -37,6 +41,7 @@
   <div class="wrap container">
     <h1 class="display-3 fw-bold text-white">Turning keys into Dreams</h1>
     <p class="lead text-white mb-4">Luxury homes. Smart investments. Seamless experience.</p>
+
     <div class="butonat d-flex justify-content-center gap-3">
       <button class="btn btn-light px-4 py-2 fw-bold">Learn More</button>
       <a href="Services.html" class="btn btn-outline-light px-4 py-2 fw-bold text-decoration-none">Services</a>
@@ -53,23 +58,38 @@
 
   <div class="homes">
     <article class="property-card">
-      <div class="foto" style="background-image:url('img/rent.jpg');"><a href="Rent.html" style="text-decoration: none; color: white;">Rent</a></div>
+      <div class="foto" style="background-image:url('img/rent.jpg');">
+        <a href="Rent.html" style="text-decoration:none; color:white;">Rent</a>
+      </div>
     </article>
 
     <article class="property-card">
-      <div class="foto" style="background-image:url('img/buy-sale.jpg');"><a href="Sale.html" style="text-decoration: none; color: white;">Buy/Sale</a> </div>
+      <div class="foto" style="background-image:url('img/buy-sale.jpg');">
+        <a href="Sale.html" style="text-decoration:none; color:white;">Buy/Sale</a>
+      </div>
     </article>
   </div>
-  
+
   <div class="thirdPart">
-    <div class="lokacioni img"> 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187266.69135334686!2d21.0009!3d42.6629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee049e70efb%3A0x2d2a0b9e5c1d0f79!2sPrishtina!5e0!3m2!1sen!2s!4v0000000000000" width="100%" height="420" style="border:0;" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="lokacioni img">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187266.69135334686!2d21.0009!3d42.6629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee049e70efb%3A0x2d2a0b9e5c1d0f79!2sPrishtina!5e0!3m2!1sen!2s!4v0000000000000"
+        width="100%" height="420" style="border:0;"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
+
     <div class="lokacioni">
       <div class="copy">
         <div class="kicker">ABOUT MICASA</div>
-        <h2 style="margin:8px 0 6px; font-family:'Playfair Display',serif;">Luxury Real Estate Agency in Prishtina, KS</h2>
-        <p>We blend modern architecture with trusted expertise to help you find your perfect home. From elegant family houses to high-end estates, every property is chosen with care, comfort, and lasting value in mind.</p>
+        <h2 style="margin:8px 0 6px; font-family:'Playfair Display',serif;">
+          Luxury Real Estate Agency in Prishtina, KS
+        </h2>
+        <p>
+          We blend modern architecture with trusted expertise to help you find your perfect home.
+          From elegant family houses to high-end estates, every property is chosen with care, comfort,
+          and lasting value in mind.
+        </p>
 
         <div class="statistika">
           <div class="stat">
@@ -89,37 +109,37 @@
     </div>
   </div>
 </section>
-  
+
 <div class="search-box">
   <h3 style="color:black;">Quick Property Search</h3>
 
   <div class="search-fields">
-    <select>
-      <option>Rent or Buy</option>
-      <option>Rent</option>
-      <option>Buy / Sale</option>
+    <select id="typeSelect">
+      <option value="">Rent or Buy</option>
+      <option value="rent">Rent</option>
+      <option value="sale">Buy / Sale</option>
     </select>
 
-    <select>
-      <option>Location</option>
-      <option>Prishtina</option>
-      <option>Ulpiana</option>
-      <option>Dardania</option>
-      <option>Velania</option>
+    <select id="locationSelect">
+      <option value="">Location</option>
+      <option value="Prishtina">Prishtina</option>
+      <option value="Ulpiana">Ulpiana</option>
+      <option value="Dardania">Dardania</option>
+      <option value="Velania">Velania</option>
     </select>
 
-    <select>
-      <option>Budget</option>
-      <option>Up to 500€</option>
-      <option>Up to 1,000€</option>
-      <option>Up to 2,000€</option>
-      <option>Up to 5,000€</option>
+    <select id="budgetSelect">
+      <option value="">Budget</option>
+      <option value="500">Up to 500€</option>
+      <option value="1000">Up to 1,000€</option>
+      <option value="2000">Up to 2,000€</option>
+      <option value="5000">Up to 5,000€</option>
     </select>
 
-    <button class="btn1">Search</button>
+    <button id="searchBtn" class="btn1" type="button">Search</button>
   </div>
 </div>
-
+<div id="results" class="mt-4"></div>
 <footer class="footer bg-dark text-light py-5 mt-5">
   <div class="container">
     <div class="row gy-4">
@@ -166,11 +186,11 @@
     <div class="footer-bottom text-center text-secondary">
       © 2025 MiCasa. All Rights Reserved.
     </div>
-
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/home.js"></script>
 
 </body>
 </html>
