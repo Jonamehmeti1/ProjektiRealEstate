@@ -29,7 +29,6 @@ body{
   margin-inline:auto;
 }
 
-/* ================= NAVBAR ================= */
 .navbar{
   position:sticky;
   top:0;
@@ -100,7 +99,6 @@ body{
   color:#111;
 }
 
-/* Dropdown */
 .nav .dropdown{
   position:relative;
 }
@@ -132,7 +130,6 @@ body{
   display:block;
 }
 
-/* ================= INTRO ================= */
 .intro{
   background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')
   center/cover no-repeat;
@@ -156,7 +153,6 @@ body{
   color:#ddd;
 }
 
-/* ================= ABOUT ================= */
 .about-section{
   max-width:1100px;
   margin:80px auto;
@@ -177,7 +173,6 @@ body{
   text-align:center;
 }
 
-/* ================= TEAM ================= */
 .team{
   display:flex;
   justify-content:center;
@@ -200,11 +195,10 @@ body{
   box-shadow:0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* 🔴 KJO PJESË I RREGULLON FOTOT */
 .team-member img{
   width:100%;
-  height:280px;        /* të gjitha fotot njësoj */
-  object-fit:cover;   /* prerje e bukur pa shtrembërim */
+  height:280px;        
+  object-fit:cover;   
   border-radius:10px;
   margin-bottom:15px;
 }
@@ -219,7 +213,6 @@ body{
   font-size:0.9rem;
 }
 
-/* ================= FOOTER ================= */
 footer{
   background:var(--bg);
   margin-top:70px;
@@ -275,7 +268,6 @@ footer{
   color:var(--sub);
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width:768px){
   .intro h1{
     font-size:2rem;
@@ -286,3 +278,19 @@ footer{
     align-items:center;
   }
 }
+about-section h2,
+  .about-section h3 {
+    color: #ffffff;
+  }
+
+  .story p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 26px;
+    letter-spacing: 0.2px;
+  }
+
+  .team-member p {
+    color: #9c7777;
+  }
