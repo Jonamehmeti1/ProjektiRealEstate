@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="LoginRegister.css">
 </head>
 <body>
-  <!-- Login forma -->
   <div class="container" id="login-container">
     <div class="logo">
       <img src="logo.png" alt="MiCasa Logo" />
@@ -20,7 +19,6 @@
     <div class="message" id="login-message"></div>
   </div>
 
-  <!-- Regjistrimi -->
   <div class="container" id="register-container" style="display: none;">
     <div class="logo">
       <img src="logo.png" alt="MiCasa Logo" />
@@ -29,9 +27,30 @@
     <input type="text" id="register-username" placeholder="Username" required />
     <input type="password" id="register-password" placeholder="Password" required />
     <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+    
+    <div class="terms-wrapper">
+      <input type="checkbox" id="register-terms">
+      <label for="register-terms">I agree to the <a onclick="openTerms()">Terms & Conditions</a></label>
+    </div>
+
     <button onclick="register()">Register</button>
     <p>Already have an account? <a onclick="showLogin()">Log In</a></p>
     <div class="message" id="register-message"></div>
+  </div>
+
+  <div id="terms-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeTerms()">&times;</span>
+      <h3>Terms and Conditions</h3>
+      <div class="terms-text">
+        <p><strong>1. Introduction</strong><br>Welcome to StoneBridge. These Terms and Conditions govern your use of our service. By registering, you agree to these terms in full.</p>
+        <p><strong>2. User Accounts</strong><br>You are responsible for safeguarding the password that you use to access the service. StoneBridge uses local storage to maintain your session.</p>
+        <p><strong>3. Data Privacy</strong><br>We do not sell your data. Your credentials are stored locally on your device's browser via localStorage.</p>
+        <p><strong>4. Prohibited Conduct</strong><br>Users may not attempt to reverse engineer the site or use it for fraudulent activities.</p>
+        <p><strong>5. Limitation of Liability</strong><br>StoneBridge is provided "as is" without any warranties of any kind.</p>
+        <p><strong>6. Intellectual Property</strong><br>All logos and branding (StoneBridge/MiCasa) are the property of their respective owners.</p>
+        </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
