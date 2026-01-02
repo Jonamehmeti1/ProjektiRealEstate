@@ -55,27 +55,50 @@ storyTitle.addEventListener("click", () => {
 
 <section class="about-section">
 
-  <h2 id="ourStoryTitle" style="cursor:pointer;">Our Story</h2>
 
-  <div class="story">
-    <p>
-      <strong>MiCasa</strong> është krijuar për njerëzit që kërkojnë më shumë sesa thjesht
-      një shtëpi me qera. Ne fokusohemi në prona të përzgjedhura, duke
-      ofruar hapësira funksionale, të mirëmbajtura dhe në lokacione të përshtatshme
-      për jetesë moderne.
-    </p>
+  <section class="our-story">
+  <div class="story-container">
 
-    <p>
-      Qasja jonë është e drejtpërdrejtë dhe profesionale. Çdo pronë që listojmë
-      kontrollohet me kujdes për standard, dokumentacion dhe kushte reale, në mënyrë
-      që klientët tanë të kenë informacion të saktë dhe vendime të sigurta.
-    </p>
+    
+    <div class="story-images">
+      <img src="interrior 1 (2).jfif" alt="Interior 1">
+      <img src="interior 2.jfif" alt="Interior 2">
+    </div>
 
-    <p>
-      MiCasa ekziston për ta bërë zgjedhjen e shtëpisë më të lehtë, më të qartë dhe
-      më të besueshme.
-    </p>
+    
+    <div class="story-text">
+      <h2>Our Story</h2>
+
+      <p class="story-preview">
+        MiCasa was created for people who seek more than just a rental property.
+        We focus on carefully selected homes, functional spaces and trusted locations.
+      </p>
+
+      <div class="story-more">
+        <p>
+          Our approach is direct and professional. Every property we list is reviewed
+          carefully for standards, documentation and real conditions — so our clients
+          can make safe and confident decisions.
+        </p>
+
+        <p>
+          We are built on long-term relationships, not quick transactions. We take time to understand each client’s lifestyle,
+           priorities and expectations, ensuring that every recommendation truly fits their needs. 
+        </p>
+
+        <p>
+          MiCasa exists to make choosing a home easier, clearer and more reliable.
+        </p>
+      </div>
+
+      <button class="story-toggle">
+        Read more <span>➜</span>
+      </button>
+    </div>
+
   </div>
+</section>
+
 
   <h2>Our Team</h2>
 
@@ -94,13 +117,13 @@ storyTitle.addEventListener("click", () => {
       <div class="card-back">
         <h3>Jona Elezi</h3>
         <p>
-          Udhëheq vizionin dhe strategjinë e MiCasa.
+          Leads the vision and strategy of MiCasa
         </p>
         <p>
-          <strong>Ju ndihmon me:</strong><br>
-          • Këshillim profesional<br>
-          • Vendime të sigurta investimi<br>
-          • Zgjedhjen e pronës ideale
+          <strong>Helps with:</strong><br>
+          • Professional advice<br>
+          • Safe investment decisions<br>
+          • Choosing the ideal property
         </p>
       </div>
     </div>
@@ -118,13 +141,13 @@ storyTitle.addEventListener("click", () => {
       <div class="card-back">
         <h3>Jona Mehmeti</h3>
         <p>
-          Përgjegjëse për dizajnin dhe prezantimin vizual.
+          Responsible for the design and visual presentation.
         </p>
         <p>
-          <strong>Ju ndihmon me:</strong><br>
-          • Prezantim profesional të pronës<br>
-          • Dizajn modern & funksional<br>
-          • Përvojë të qartë për klientin
+          <strong>Helps with:</strong><br>
+          • Presentation of the property<br>
+          • Modern design & functional<br>
+          • Clear customer experience
         </p>
       </div>
     </div>
@@ -142,12 +165,12 @@ storyTitle.addEventListener("click", () => {
       <div class="card-back">
         <h3>Kron Pajaziti</h3>
         <p>
-          Analizon tregun dhe identifikon mundësi investimi.
+          Analyzes the market and identifies investment opportunities
         <p>
-          <strong>Ju ndihmon me:</strong><br>
-          • Analizë investimi<br>
-          • Vlerësim prone<br>
-          • Strategji financiare
+          <strong>Helps with:</strong><br>
+          • Investment analysis<br>
+          • Property valuation<br>
+          • Financial strategy
         </p>
       </div>
     </div>
@@ -165,13 +188,13 @@ storyTitle.addEventListener("click", () => {
       <div class="card-back">
         <h3>Edina Ismajli</h3>
         <p>
-          Siguron korrektësi ligjore dhe dokumentacion.
+          Ensures legal correctness and documentation
         </p>
         <p>
-          <strong>Ju ndihmon me:</strong><br>
-          • Kontrata<br>
-          • Siguri ligjore <br>
-          • Proces pa stres
+          <strong>Helps with:</strong><br>
+          • Contracts<br>
+          • Legal certainty <br>
+          • Stress free process
         </p>
       </div>
     </div>
@@ -189,13 +212,13 @@ storyTitle.addEventListener("click", () => {
       <div class="card-back">
         <h3>Orges Gashi</h3>
         <p>
-          Fokusuar në nevojat e klientëve.
+          Focused on costomer needs
         </p>
         <p>
-          <strong>Ju ndihmon me:</strong><br>
-          • Gjetjen e banesës ideale<br>
-          • Negocim çmimi<br>
-          • Mbështetje gjatë procesit
+          <strong>Helps with:</strong><br>
+          • Finding the ideal apartment<br>
+          • Price negotiation<br>
+          • Support during the process
         </p>
       </div>
     </div>
@@ -262,15 +285,31 @@ document.querySelectorAll('.team-member').forEach(card=>{
 
 
 <script>
+  
 document.addEventListener("DOMContentLoaded", function () {
   const title = document.getElementById("ourStoryTitle");
   const story = document.querySelector(".story");
 
-  if (title && story) {
-    title.addEventListener("click", function () {
-      story.classList.toggle("active");
-    });
-  }
+  title.addEventListener("click", function () {
+    story.classList.toggle("active");
+    title.classList.toggle("active");
+  });
 });
 </script>
+
+<script>
+  const toggleBtn = document.querySelector('.story-toggle');
+  const storyText = document.querySelector('.story-text');
+
+  toggleBtn.addEventListener('click', () => {
+    storyText.classList.toggle('active');
+
+    toggleBtn.innerHTML = storyText.classList.contains('active')
+      ? 'Read less <span>➜</span>'
+      : 'Read more <span>➜</span>';
+  });
+</script>
+
+
+
 
