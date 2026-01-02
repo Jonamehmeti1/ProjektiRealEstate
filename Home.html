@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MiCasa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiCasa</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="dark-theme">
@@ -110,6 +110,9 @@
   </div>
 </section>
 
+<div id="favorites-root"></div>
+
+
 <div class="search-box">
   <h3 style="color:black;">Quick Property Search</h3>
 
@@ -139,11 +142,12 @@
     <button id="searchBtn" class="btn1" type="button">Search</button>
   </div>
 </div>
+
 <div id="results" class="mt-4"></div>
+
 <footer class="footer bg-dark text-light py-5 mt-5">
   <div class="container">
     <div class="row gy-4">
-
       <div class="col-lg-4 col-md-6">
         <a href="Home.html" class="h3 text-white text-decoration-none font-serif">MiCasa</a>
         <p class="mt-3 text-secondary" style="max-width: 380px;">
@@ -165,7 +169,7 @@
       <div class="col-lg-3 col-md-6">
         <h5 class="text-white mb-3">Company</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">About Us</a></li>
+          <li class="mb-2"><a href="AboutUs.html" class="text-secondary text-decoration-none">About Us</a></li>
           <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Our Agents</a></li>
           <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Careers</a></li>
           <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
@@ -178,7 +182,6 @@
         <div class="text-secondary mb-2">+383 12 345 667</div>
         <div class="text-secondary">hello@MiCasa.com</div>
       </div>
-
     </div>
 
     <hr class="border-secondary my-4">
@@ -190,7 +193,195 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/home.js"></script>
 
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "micasa_favorites_v1";
+    const LOGIN_URL = "LoginRegister.html";
+    const LOGIN_FLAG = "micasa_logged_in";
+
+  
+    localStorage.removeItem(STORAGE_KEY);
+
+    const PROPERTIES = [
+      { id: "p1", title: "Modern Apartment", location: "Prishtina", price: 950, type: "rent", image: "img/rent.jpg" },
+      { id: "p2", title: "Luxury Villa", location: "Velania", price: 245000, type: "sale", image: "img/buy-sale.jpg" },
+      { id: "p3", title: "Cozy Flat", location: "Ulpiana", price: 700, type: "rent", image: "img/rent.jpg" },
+      { id: "p4", title: "Penthouse View", location: "Dardania", price: 1800, type: "rent", image: "img/rent.jpg" },
+      { id: "p5", title: "Family House", location: "Prishtina", price: 165000, type: "sale", image: "img/buy-sale.jpg" },
+      { id: "p6", title: "Studio Apartment", location: "Velania", price: 520, type: "rent", image: "img/rent.jpg" },
+      { id: "p7", title: "City Center Flat", location: "Prishtina", price: 1200, type: "rent", image: "img/rent.jpg" },
+      { id: "p8", title: "New Villa Project", location: "Ulpiana", price: 310000, type: "sale", image: "img/buy-sale.jpg" },
+      { id: "p9", title: "Cozy House", location: "Dardania", price: 210000, type: "sale", image: "img/buy-sale.jpg" }
+    ];
+
+    function isLoggedIn() {
+      return localStorage.getItem(LOGIN_FLAG) === "true";
+    }
+
+    function loadFavorites() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveFavorites(favs) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(favs));
+    }
+
+    function FavoritesSlider() {
+      const e = React.createElement;
+
+      const perPage = 3;
+
+      const [favorites, setFavorites] = React.useState(loadFavorites());
+      const [page, setPage] = React.useState(0);
+
+      React.useEffect(() => {
+        saveFavorites(favorites);
+      }, [favorites]);
+
+      const favoriteSet = new Set(favorites);
+
+      function handleHeartClick(id) {
+        if (!isLoggedIn()) {
+          localStorage.setItem("redirect_after_login", window.location.href);
+          window.location.href = LOGIN_URL;
+          return;
+        }
+        setFavorites((prev) => {
+          if (prev.includes(id)) return prev.filter((x) => x !== id);
+          return prev.concat(id);
+        });
+      }
+
+      const totalPages = Math.ceil(PROPERTIES.length / perPage);
+
+      function prev() {
+        setPage((p) => Math.max(0, p - 1));
+      }
+
+      function next() {
+        setPage((p) => Math.min(totalPages - 1, p + 1));
+      }
+
+      const start = page * perPage;
+      const visible = PROPERTIES.slice(start, start + perPage);
+
+      const cards = visible.map((p) => {
+        const isSaved = favoriteSet.has(p.id);
+        const priceText = p.type === "rent"
+          ? `€${p.price.toLocaleString()}/month`
+          : `€${p.price.toLocaleString()}`;
+
+        return e("div", { className: "col-md-4", key: p.id },
+          e("div", { className: "card h-100 shadow-sm", style: { borderRadius: 14, overflow: "hidden" } },
+            e("div", {
+              style: {
+                height: 180,
+                backgroundImage: `url('${p.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                position: "relative"
+              }
+            },
+              e("button", {
+                onClick: () => handleHeartClick(p.id),
+                title: isSaved ? "Remove from saved" : "Save property",
+                style: {
+                  position: "absolute",
+                  top: 12,
+                  right: 12,
+                  width: 42,
+                  height: 42,
+                  borderRadius: 999,
+                  border: "none",
+                  background: "rgba(255,255,255,0.95)",
+                  cursor: "pointer",
+                  fontSize: 18
+                }
+              }, isSaved ? "❤️" : "🤍"),
+
+              e("div", {
+                style: {
+                  position: "absolute",
+                  bottom: 10,
+                  left: 10,
+                  padding: "6px 10px",
+                  borderRadius: 999,
+                  background: "rgba(0,0,0,0.75)",
+                  color: "#fff",
+                  fontSize: 12
+                }
+              }, p.type.toUpperCase())
+            ),
+
+            e("div", { className: "card-body" },
+              e("h5", { className: "card-title mb-1" }, p.title),
+              e("div", { className: "text-muted mb-2" }, p.location),
+              e("div", { className: "fw-bold" }, priceText)
+            )
+          )
+        );
+      });
+
+      const savedItems = PROPERTIES.filter((p) => favoriteSet.has(p.id));
+
+      const savedList = savedItems.length === 0
+        ? e("div", { className: "text-muted" }, "No saved properties yet. Click the heart on a card.")
+        : e("ul", { className: "mb-0" },
+            savedItems.map((p) =>
+              e("li", {
+                key: p.id,
+                className: "d-flex align-items-center justify-content-between py-1"
+              },
+                e("span", null, e("b", null, p.title), " — ", p.location),
+                e("button", {
+                  className: "btn btn-sm btn-outline-dark",
+                  onClick: () => handleHeartClick(p.id)
+                }, "Remove")
+              )
+            )
+          );
+
+      return e("div", { className: "mt-5 container" },
+
+        e("div", { className: "d-flex align-items-center justify-content-between mb-3" },
+          e("h3", { style: { fontFamily: "Playfair Display, serif" } }, "Most Frequented Properties"),
+
+          e("div", { className: "d-flex align-items-center gap-2" },
+            e("button", {
+              className: "btn btn-outline-light",
+              onClick: prev,
+              disabled: page === 0
+            }, "‹"),
+
+            e("button", {
+              className: "btn btn-outline-light",
+              onClick: next,
+              disabled: page === totalPages - 1
+            }, "›")
+          )
+        ),
+
+        e("div", { className: "row g-4" }, cards)
+      );
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const mount = document.getElementById("favorites-root");
+      if (!mount) return;
+      ReactDOM.createRoot(mount).render(React.createElement(FavoritesSlider));
+    });
+  })();
+</script>
+<script src="js/home.js"></script>
 </body>
 </html>
