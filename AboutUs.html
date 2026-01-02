@@ -6,23 +6,34 @@
 <title>MiCasa</title>
 
 <link rel="stylesheet" href="AboutUs.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
+
+<script>
+const storyTitle = document.getElementById("ourStoryTitle");
+const storyBox = document.querySelector(".story");
+
+storyTitle.addEventListener("click", () => {
+  storyBox.classList.toggle("active");
+});
+</script>
+
 
 <body>
 
 <header class="navbar">
   <div class="inner-container">
-    <img class="logo" src="img/logo.png" alt="Logo">
+    <a href="Home.html"><img class="logo" src="logo.png" alt="Logo"></a>
 
     <div style="display:flex; align-items:center; margin-right:2%;">
       <nav class="nav">
-        <a href="Home.html">Home</a>
-        <a href="AboutUs.html" class="active">About Us</a>
+        <a href="Home.html" class="active">Home</a>
+        <a href="AboutUs.html">About Us</a>
 
         <div class="dropdown">
-          <a class="dropdown-toggle">Services</a>
+          <a class="dropdown-toggle">Services </a>
           <div class="dropdown-menu">
             <a href="Rent.html">Rent</a>
             <a href="Sale.html">Sale</a>
@@ -44,7 +55,7 @@
 
 <section class="about-section">
 
-  <h2>Our Story</h2>
+  <h2 id="ourStoryTitle" style="cursor:pointer;">Our Story</h2>
 
   <div class="story">
     <p>
@@ -248,3 +259,18 @@ document.querySelectorAll('.team-member').forEach(card=>{
 
 </body>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const title = document.getElementById("ourStoryTitle");
+  const story = document.querySelector(".story");
+
+  if (title && story) {
+    title.addEventListener("click", function () {
+      story.classList.toggle("active");
+    });
+  }
+});
+</script>
+

@@ -1,135 +1,135 @@
 :root{
-  --bg:#0f1317;        /* ngjyra e background */
-  --muted:#1a2027;     /* ngjyra e cards */
-  --text:#e9edf1;      /* ngjyra e shkrimit kryesor */
-  --sub:#b8c0cc;       /* ngjyra e tekstit dytësor */
-  --gold:#C6A664;      /* ngjyra e butonave */
-  --border:#2a323d;    /* ngjyra e border */
+  --bg:#0f1317;        /*ngjyra e background*/                  
+  --muted:#1a2027;     /*ngjyra e cards*/    
+  --text:#e9edf1;      /*ngjyra e pare 1 shkrimeve*/  
+  --sub:#b8c0cc;       /*ngjyra e linqeve e shkrimeve*/
+  --gold:#C6A664;      /*ngjyra e butoneve*/
+  --border:#2a323d;    /*ngjyra e bordeers perreth */
   --radius:14px;
 }
-
 *{
   box-sizing:border-box;
 }
-
-html, body{
-  height:100%;
+html,body{
+  height:100%
 }
-
 body{
   margin:0;
-  background:var(--bg);
-  color:var(--text);
+  color:var(--text) !important; /* !important ja kom shkru qe mos me kriju konflikt me pjesen e bootstrap */
+  background:var(--bg) !important; 
   font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
   line-height:1.55;
 }
-
 .container{
-  width:min(1200px, 92%);
-  margin-inline:auto;
+  width:min(1200px, 92%); 
+  margin-inline:auto
 }
 
+/* Qetu fillon pjesa e Nav Bar-it. Krejt duhet me pas njejttt*/
 .navbar{
-  position:sticky;
+  position:sticky; 
   top:0;
   z-index:50;
   background:linear-gradient(180deg, rgba(15,19,23,.9), rgba(15,19,23,.6));
   border-bottom:1px solid var(--border);
-  padding:5px 0;
+  padding: 5px 0px;
 }
-
 .navbar .inner-container{
   height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
   gap:20px;
+  width: 100%;
 }
-
-.logo{
+.logo{ 
   display:flex;
-  align-items:center;
+  align-items:center; 
   gap:12px;
-  width:130px;
-  height:90px;
-  margin-left:5%;
+  width: 130px;                
+  height: 90px;
+  margin-left: 5%;
 }
 
-.nav{
-  display:flex;
-  gap:26px;
-  margin-right:20px;
+.nav {
+  display: flex;
+  gap: 26px;
+  margin-right: 20px; 
 }
 
-.nav a{
-  color:var(--sub);
-  text-decoration:none;
-  font-weight:500;
-  padding:10px 25px;
-  position:relative;
+.nav a {
+  color: var(--sub);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 25px;
+  position: relative;
 }
-
 .nav a:hover,
-.nav a.active{
-  color:var(--text);
+.nav a.active {
+  color: var(--text);
 }
-
-.nav a.active::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-14px;
-  height:2px;
-  background:#fff;
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 2px;
+  background: #fff;
 }
-
 .btn1{
-  background:var(--gold);
-  color:#111;
-  border:none;
+  background:var(--gold); 
+  color:#111; 
+  border:none; 
   padding:10px 16px;
-  border-radius:10px;
-  font-weight:600;
+  border-radius:10px; 
+  font-weight:600; 
   box-shadow:0 10px 25px rgba(202,166,106,.25);
+  cursor: pointer;
 }
-
 .btn1 a{
-  text-decoration:none;
-  color:#111;
+  text-decoration: none;
+  color:#111; 
 }
 
-.nav .dropdown{
-  position:relative;
+.nav .dropdown {
+  position: relative;
 }
 
-.dropdown-menu{
-  position:absolute;
-  top:100%;
-  left:0;
-  background:var(--bg);
-  border:1px solid var(--border);
-  min-width:120px;
-  padding:6px 0;
-  display:none;
+.nav .dropdown-toggle {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--sub);
 }
 
-.dropdown-menu a{
-  display:block;
-  padding:8px 14px;
-  color:var(--sub);
-  font-size:0.95rem;
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg, #111); 
+  border: 1px solid var(--border);
+  min-width: 120px;
+  padding: 6px 0;
+  display: none;
+  z-index: 1000;
 }
 
-.dropdown-menu a:hover{
-  background:var(--border);
-  color:var(--text);
+.dropdown-menu a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--sub);
+  font-size: 0.95rem;
 }
 
-.dropdown:hover .dropdown-menu{
-  display:block;
+.dropdown-menu a:hover {
+  background: var(--border);
+  color: var(--text);
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .intro{
   background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')
   center/cover no-repeat;
@@ -322,4 +322,19 @@ about-section h2,
 
 .card-back {
   transform: rotateY(180deg);
+}
+
+
+.story {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.6s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.story.active {
+  max-height: 1500px;
+  opacity: 1;
+  transform: translateY(0);
 }
