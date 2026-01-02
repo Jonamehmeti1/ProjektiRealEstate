@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Property Details | MiCasa</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rent | MiCasa</title>
 
-  <link rel="stylesheet" href="css/sale.css" />
- <link
+    <link rel="stylesheet" href="css/detailsRent.css" />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
@@ -15,7 +16,7 @@
   <body>
     <header class="navbar">
       <div class="inner-container">
-        <img class="logo" src="logo.png" alt="Logo" />
+        <img class="logo" src="img/logo.png" alt="Logo" />
 
         <div style="display: flex; align-items: center; margin-right: 2%">
           <nav class="nav">
@@ -29,36 +30,25 @@
         </div>
       </div>
     </header>
-    <section class="details-container">
 
-  <div class="details-gallery">
-    <div class="gallery-main" id="mainImg"></div>
+    <div class="details-container">
+      <div class="gallery">
+        <img id="mainImage" class="main-image" />
 
-    <div class="gallery-thumbs">
-      <div class="thumb" id="img1"></div>
-      <div class="thumb" id="img2"></div>
-      <div class="thumb" id="img3"></div>
-      <div class="thumb" id="img4"></div>
+        <div class="thumbnails" id="thumbnails"></div>
+      </div>
+
+      <div class="info">
+          <h1 id="title"></h1>
+        <h2 id="price"></h2>
+        <h3 id="features"></h3>
+        <p id="location"></p>
+        <p id="description"></p>
+        <button class="btn1">Contact Now</button>
+      </div>
     </div>
-  </div>
 
-  <div class="details-info">
-    <h1 id="price"></h1>
-    <p class="info" id="info"></p>
-    <p class="location" id="location"></p>
-    <p class="features" id="features"></p>
-
-    <button class="btn">Book Now</button>
-
-    <a href="Sale.html">
-      <button class="btn">Back to RentPage</button>
-    </a>
-  </div>
-
-</section>
-
- 
-   <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="cols">
           <div>
@@ -85,10 +75,6 @@
         </div>
       </div>
     </footer>
+    <script src="detailsRent.js"></script>
   </body>
-</html>
-
-
-  <script src="js/details.js"></script>
-</body>
 </html>
