@@ -1,3 +1,4 @@
+
 :root{
   --bg:#0f1317;        /*ngjyra e background*/                  
   --muted:#1a2027;     /*ngjyra e cards*/    
@@ -127,6 +128,108 @@ body{
   color: var(--text);
 }
 
+.navbar{
+  position:sticky; 
+  top:0;
+  z-index:50;
+  background:linear-gradient(180deg, rgba(15,19,23,.9), rgba(15,19,23,.6));
+  border-bottom:1px solid var(--border);
+  padding: 5px 0px;
+}
+.navbar .inner-container{
+  height:100px;
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:20px;
+  width: 100%;
+}
+.logo{ 
+  display:flex;
+  align-items:center; 
+  gap:12px;
+  width: 130px;                
+  height: 90px;
+  margin-left: 5%;
+}
+.nav {
+  display: flex;
+  gap: 26px;
+  margin-right: 20px; 
+}
+
+
+.nav a {
+  color: var(--sub);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 25px;
+  position: relative;
+}
+.nav a:hover,
+.nav a.active {
+  color: var(--text);
+}
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 2px;
+  background: #fff;
+}
+.btn1{
+  background:var(--gold); 
+  color:#111; 
+  border:none; 
+  padding:10px 16px;
+  border-radius:10px; 
+  font-weight:600; 
+  box-shadow:0 10px 25px rgba(202,166,106,.25);
+  cursor: pointer;
+}
+.btn1 a{
+  text-decoration: none;
+  color:#111; 
+}
+
+.nav .dropdown {
+  position: relative;
+}
+
+.nav .dropdown-toggle {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--sub);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--bg, #111); 
+  border: 1px solid var(--border);
+  min-width: 120px;
+  padding: 6px 0;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: var(--sub);
+  font-size: 0.95rem;
+}
+
+.dropdown-menu a:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -141,6 +244,7 @@ body{
   text-align:center;
   color:white;
 }
+
 
 .intro h1{
   font-size:3rem;
