@@ -1,12 +1,10 @@
 const { useState, useEffect } = React;
 
 function AvailabilityToggle() {
-
   const [available, setAvailable] = useState(true);
 
-  
   useEffect(() => {
-    const randomAvailable = Math.random() > 0.3; 
+    const randomAvailable = Math.random() > 0.3;
     setAvailable(randomAvailable);
   }, []);
 
@@ -24,7 +22,6 @@ function AvailabilityToggle() {
     available ? "✔ Available" : "✖ Not Available"
   );
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById("availability-root"));
 root.render(React.createElement(AvailabilityToggle));

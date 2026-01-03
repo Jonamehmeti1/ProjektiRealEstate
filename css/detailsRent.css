@@ -1,53 +1,58 @@
-:root{
-  --bg:#0f1317;        /*ngjyra e background*/                  
-  --muted:#1a2027;     /*ngjyra e cards*/    
-  --text:#e9edf1;      /*ngjyra e pare 1 shkrimeve*/  
-  --sub:#b8c0cc;       /*ngjyra e linqeve e shkrimeve*/
-  --gold:#C6A664;      /*ngjyra e butoneve*/
-  --border:#2a323d;    /*ngjyra e bordeers perreth */
-  --radius:14px;
+:root {
+  --bg: #0f1317; /*ngjyra e background*/
+  --muted: #1a2027; /*ngjyra e cards*/
+  --text: #e9edf1; /*ngjyra e pare 1 shkrimeve*/
+  --sub: #b8c0cc; /*ngjyra e linqeve e shkrimeve*/
+  --gold: #c6a664; /*ngjyra e butoneve*/
+  --border: #2a323d; /*ngjyra e bordeers perreth */
+  --radius: 14px;
 }
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
 }
-html,body{
-  height:100%
+html,
+body {
+  height: 100%;
 }
-body{
-  margin:0;
-  color:var(--text) !important; 
-  background:var(--bg) !important; 
-  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-  line-height:1.55;
+body {
+  margin: 0;
+  color: var(--text) !important;
+  background: var(--bg) !important;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
 }
 
-.container{
-  width:min(1200px, 92%); 
-  margin-inline:auto
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
 }
 
 /* Qetu fillon pjesa e Nav Bar-it. Krejt duhet me pas njejttt*/
-.navbar{
-  position:sticky; 
-  top:0;
-  z-index:50;
-  background:linear-gradient(180deg, rgba(15,19,23,.9), rgba(15,19,23,.6));
-  border-bottom:1px solid var(--border);
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 19, 23, 0.9),
+    rgba(15, 19, 23, 0.6)
+  );
+  border-bottom: 1px solid var(--border);
   padding: 5px 0px;
 }
-.navbar .inner-container{
-  height:100px;
-  display:flex; 
-  align-items:center; 
-  justify-content:space-between; 
-  gap:20px;
+.navbar .inner-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   width: 100%;
 }
-.logo{ 
-  display:flex;
-  align-items:center; 
-  gap:12px;
-  width: 130px;                
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 130px;
   height: 90px;
   margin-left: 5%;
 }
@@ -55,7 +60,7 @@ body{
 .nav {
   display: flex;
   gap: 26px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .nav a {
@@ -136,18 +141,18 @@ body{
 }
 
 .btn-contact {
-  background: linear-gradient(135deg, #C6A664, #d4b06a);
+  background: linear-gradient(135deg, #c6a664, #d4b06a);
   color: #111;
   padding: 12px 20px;
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 10px 25px rgba(202,166,106,.25);
+  box-shadow: 0 10px 25px rgba(202, 166, 106, 0.25);
   transition: all 0.3s ease;
 }
 
 .btn-contact:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(202,166,106,.35);
+  box-shadow: 0 14px 35px rgba(202, 166, 106, 0.35);
 }
 
 .btn-contact a {
@@ -167,7 +172,6 @@ body{
   animation: fadeIn 0.6s ease-in-out;
 }
 
-
 .gallery {
   flex: 1.2;
 }
@@ -179,7 +183,7 @@ body{
   border-radius: 16px;
   margin-bottom: 12px;
   border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -209,14 +213,14 @@ body{
   background-color: var(--muted);
   padding: 30px;
   border-radius: var(--radius);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   color: #fff;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   transition: all 0.3s ease;
 }
 
 .info:hover {
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .info h1 {
@@ -234,7 +238,6 @@ body{
   margin-bottom: 14px;
   color: var(--gold);
 }
-
 
 .info h3 {
   font-size: 22px;
@@ -287,8 +290,14 @@ body{
 
 /* ANIMATIONS */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* RESPONSIVE */
@@ -303,10 +312,10 @@ body{
 }
 .info .btn1 {
   margin-top: 30px;
-  padding: 16px 34px;      
-  font-size: 17px;        
+  padding: 16px 34px;
+  font-size: 17px;
   border-radius: 14px;
-  min-width: 470px;       
+  min-width: 470px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
