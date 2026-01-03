@@ -55,7 +55,8 @@ function renderResults(items) {
     `;
     return;
   }
-  const cards = items.map((p) => {
+  const cards = items
+    .map((p) => {
       const priceText =
         p.type === "rent"
           ? `€${p.price.toLocaleString()}/month`
@@ -89,14 +90,15 @@ function renderResults(items) {
   `;
 }
 function applyFilters() {
-  const type = typeSelect.value; 
-  const location = locationSelect.value; 
+  const type = typeSelect.value;
+  const location = locationSelect.value;
   const budgetMax = budgetSelect.value ? Number(budgetSelect.value) : null;
 
   const filtered = PROPERTIES.filter((p) => {
     if (type && p.type !== type) return false;
     if (location && p.location !== location) return false;
-    if (budgetMax !== null && p.type === "rent" && p.price > budgetMax) return false;
+    if (budgetMax !== null && p.type === "rent" && p.price > budgetMax)
+      return false;
 
     return true;
   });

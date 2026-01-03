@@ -123,7 +123,6 @@ body {
   display: block;
 }
 
-
 .btn1 {
   background: var(--gold);
   color: #111;
@@ -159,7 +158,6 @@ body {
   color: #111;
   display: inline-block;
 }
-
 
 .details-container {
   display: flex;
@@ -205,7 +203,6 @@ body {
   transform: scale(1.08);
   box-shadow: 0 0 12px rgba(189, 189, 146, 0.4);
 }
-
 
 .info {
   flex: 1;
@@ -256,7 +253,6 @@ body {
   margin-top: 20px;
 }
 
-
 .footer {
   border-top: 1px solid var(--border);
 }
@@ -287,7 +283,6 @@ body {
   border-top: 1px solid var(--border);
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -298,7 +293,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 @media (max-width: 900px) {
   .details-container {

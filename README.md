@@ -1,6 +1,6 @@
-#ProjektiRealEstate – MiCasa
+`#ProjektiRealEstate – MiCasa
 
- MiCasa është një aplikacion web për listimin dhe menaxhimin e pronave për qira dhe shitje. Projekti është zhvilluar si pjesë e një detyre universitare dhe synon të demonstrojë aftësi praktike në zhvillimin front-end, dizajnin responsive dhe strukturimin korrekt të një aplikacioni web.
+MiCasa është një aplikacion web për listimin dhe menaxhimin e pronave për qira dhe shitje. Projekti është zhvilluar si pjesë e një detyre universitare dhe synon të demonstrojë aftësi praktike në zhvillimin front-end, dizajnin responsive dhe strukturimin korrekt të një aplikacioni web.
 
 ---
 
@@ -18,12 +18,12 @@
 
 ---
 
-##  Teknologjitë e Përdorura
+## Teknologjitë e Përdorura
 
-- HTML5  
-- CSS3  
-- JavaScript  
-- Bootstrap 5  
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
 - Google Fonts (Playfair Display, Inter)
 - React Js
 
@@ -32,22 +32,25 @@
 ## Struktura e Projektit
 
 ProjektiRealEstate/
-- Home.html  
-- Rent.html  
-- Sale.html  
-- AboutUs.html  
-- LoginRegister.html  
-- detailsRent.html  
+
+- Home.html
+- Rent.html
+- Sale.html
+- AboutUs.html
+- LoginRegister.html
+- detailsRent.html
 
 css/
-- style.css  
-- rent.css  
+
+- style.css
+- rent.css
 
 img/
-- H1.jpg  
-- H2.jpg  
-- H3.jpg  
-- …  
+
+- H1.jpg
+- H2.jpg
+- H3.jpg
+- …
 
 README.md
 
@@ -55,12 +58,12 @@ README.md
 
 ## Si të Ekzekutohet Projekti
 
-1. Klononi repository-n nga GitHub:
-   git clone https://github.com/Jonamehmeti1/ProjektiRealEstate.git
+1.  Klononi repository-n nga GitHub:
+    git clone https://github.com/Jonamehmeti1/ProjektiRealEstate.git
 
-2. Hapni projektin në një editor (VS Code, etj.)
+2.  Hapni projektin në një editor (VS Code, etj.)
 
-3. Hapni file-in `Home.html` në browser
+3.  Hapni file-in `Home.html` në browser
 
 ---
 
@@ -74,6 +77,7 @@ kemi zhvilluar lëndë këtë semestër.
 ## Qëllimi i Projektit
 
 Qëllimi kryesor i këtij projekti është:
+
 - Ushtrimi i zhvillimit front-end
 - Aplikimi i dizajnit modern dhe responsive
 - Integrimi i Bootstrap-it pa konflikte me CSS-in personal
@@ -90,3 +94,4 @@ Ky projekt është zhvilluar për qëllime akademike dhe edukative.
 ---
 
 ✨ **MiCasa – Turning Keys Into Dreams**
+`

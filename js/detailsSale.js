@@ -85,11 +85,12 @@ const houses = [
   },
   {
     id: 16,
-    title:"Luxury Penthouse in the middle of Pristina",
+    title: "Luxury Penthouse in the middle of Pristina",
     price: "750 000 $",
     features: "3 Bedrooms · 2 Bathrooms · 280 m²",
     location: "Pristina , Kosovo",
-    description: "The best penthouse with the best city view. It can be yours for the best price and making a deal with the best real estate agency.",
+    description:
+      "The best penthouse with the best city view. It can be yours for the best price and making a deal with the best real estate agency.",
     images: [
       "img/download7.jpg",
       "img/download8.jpg",
@@ -101,11 +102,12 @@ const houses = [
   },
   {
     id: 17,
-        title:"Modern Mansion",
+    title: "Modern Mansion",
     price: "295 000 $",
     features: "4 Bedrooms · 2 Bathrooms · 350 m²",
     location: "Lagja Marigona, Kosovo",
-    description: "Peace and comfort in one price. Getting your dream house now has a wonderful price. Make your dreams a reality. ",
+    description:
+      "Peace and comfort in one price. Getting your dream house now has a wonderful price. Make your dreams a reality. ",
     images: [
       "img/download13.jpg",
       "img/download14.jpg",
@@ -117,11 +119,12 @@ const houses = [
   },
   {
     id: 18,
-        title:"Elegant Big Mansion",
+    title: "Elegant Big Mansion",
     price: "980 000 $",
     features: "4 Bedrooms · 3 Bathrooms · 450 m²",
     location: "Vitomiricë, Kosovo",
-    description: "Country life and city luxury in one house and one price. The house that everyone has been waiting for is for sale.",
+    description:
+      "Country life and city luxury in one house and one price. The house that everyone has been waiting for is for sale.",
     images: [
       "img/download19.jpg",
       "img/download20.jpg",
@@ -131,13 +134,14 @@ const houses = [
       "img/download24.jpg",
     ],
   },
-    {
+  {
     id: 19,
-        title:"Cozy Mountain Mansion",
+    title: "Cozy Mountain Mansion",
     price: "1 250 000 $",
     features: "4 Bedrooms · 3 Bathrooms · 322 m²",
     location: "Rugovë, Kosovo",
-    description: "Modern mansion in a quiet and clean area. Buy the view and the comfort not only the hose.",
+    description:
+      "Modern mansion in a quiet and clean area. Buy the view and the comfort not only the hose.",
     images: [
       "img/download25.jpg",
       "img/download26.jpg",
@@ -149,11 +153,12 @@ const houses = [
   },
   {
     id: 20,
-        title:"Urban Comfy Penthouse",
+    title: "Urban Comfy Penthouse",
     price: "430 000 $",
     features: "2 Bedrooms · 3 Bathromms · 200 m²",
     location: "Mitrovicë, Kosovo",
-    description: "The best penthouse for a family. Comfort,peace and joy all in one place",
+    description:
+      "The best penthouse for a family. Comfort,peace and joy all in one place",
     images: [
       "img/download31.jpg",
       "img/download32.jpg",
@@ -165,11 +170,12 @@ const houses = [
   },
   {
     id: 21,
-        title:"Modern Villa",
+    title: "Modern Villa",
     price: "2 300 000 $",
     features: "5 Bedrooms · 3 Bathrooms · 700 m²",
     location: "Rugovë, Kosovo",
-    description: "Modern Villa for sale. Buy yourself a place where your mind stops overthinking and the body rests.",
+    description:
+      "Modern Villa for sale. Buy yourself a place where your mind stops overthinking and the body rests.",
     images: [
       "img/download37.jpg",
       "img/download38.jpg",
@@ -181,11 +187,12 @@ const houses = [
   },
   {
     id: 22,
-        title:"Luxury Modern House",
+    title: "Luxury Modern House",
     price: "€380 000 $",
     features: "2 Bedrooms · 2 Bathrooms · 180 m²",
     location: "Bërrnicë, Kosovo",
-    description: "A peaceful and well-kept home. Put your children a smile on their face.",
+    description:
+      "A peaceful and well-kept home. Put your children a smile on their face.",
     images: [
       "img/download43.jpg",
       "img/download44.jpg",
@@ -197,23 +204,24 @@ const houses = [
   },
   {
     id: 23,
-        title:"City Life Modern Duplex",
+    title: "City Life Modern Duplex",
     price: "720 000 $",
     features: "5 Bedrooms · 3 Bathrooms · 225 m²",
     location: "Prishtinë, Kosovo",
-    description: "The dream duplex everyone wants has officially arrived. Buy yourself status not only a apartment.",
+    description:
+      "The dream duplex everyone wants has officially arrived. Buy yourself status not only a apartment.",
     images: [
       "img/download56.jpg",
       "img/download57.jpg",
       "img/download58.jpg",
       "img/download59.jpg",
       "img/download60.jpg",
-        "img/download61.jpg",
+      "img/download61.jpg",
     ],
   },
   {
     id: 24,
-        title:"Modern Glass Villa",
+    title: "Modern Glass Villa",
     price: "1 950 000 $",
     features: "4 Bedrooms · 4 Bathrooms · 390 m²",
     location: " Gjilan, Kosovo",
@@ -224,12 +232,12 @@ const houses = [
       "img/download51.jpg",
       "img/download52.jpg",
       "img/download53.jpg",
-        "img/download54.jpg",
+      "img/download54.jpg",
     ],
   },
-    {
+  {
     id: 25,
-        title:"Ultra-luxury and Modern Villa",
+    title: "Ultra-luxury and Modern Villa",
     price: "3 600 000 $",
     features: "6 Bedrooms · 3 Bathrooms · 522 m²",
     location: "Junik, Kosovo",
@@ -240,28 +248,29 @@ const houses = [
       "img/download65.jpg",
       "img/download66.jpg",
       "img/download67.jpg",
-        "img/download63.jpg",
+      "img/download63.jpg",
     ],
   },
   {
     id: 26,
-        title:"Cozy Family Apartment",
+    title: "Cozy Family Apartment",
     price: "520 000 $",
     features: "3 Bedrooms · 2 Bathrooms · 250 m²",
     location: "Prishtinë, Kosovo",
-    description: "A place where you can find you and your family making memories.",
+    description:
+      "A place where you can find you and your family making memories.",
     images: [
       "img/download.jpg",
       "img/download2.jpg",
       "img/Download3.jpg",
       "img/Download4.jpg",
       "img/Download5.jpg",
-      "img/download6.jpg"
+      "img/download6.jpg",
     ],
   },
   {
     id: 27,
-        title:"Lakeview Villa",
+    title: "Lakeview Villa",
     price: "210 000 $",
     features: "3 Bedrooms · 1 Bathrooms · 120 m²",
     location: "Deçan, Kosovo",
@@ -272,28 +281,29 @@ const houses = [
       "img/download70.jpg",
       "img/Download71.jpg",
       "img/download72.jpg",
-      "img/download73.jpg"
+      "img/download73.jpg",
     ],
   },
   {
     id: 28,
-        title:"Ultra-luxury Mansion",
+    title: "Ultra-luxury Mansion",
     price: "495 000 $",
     features: "4 Bedrooms · 2 Bathrooms · 280 m²",
     location: "Arllat, Kosovo",
-    description: "A peaceful and well-kept home. Get a place where your heart feels free.",
+    description:
+      "A peaceful and well-kept home. Get a place where your heart feels free.",
     images: [
       "img/download80.jpg",
       "img/download75.jpg",
       "img/Download76.jpg",
       "img/Download77.jpg",
       "img/Download78.jpg",
-      "img/download79.jpg"
+      "img/download79.jpg",
     ],
   },
   {
     id: 29,
-        title:"Cozy and Traditional House",
+    title: "Cozy and Traditional House",
     price: "850 000 $",
     features: "5 Bedrooms · 2 Bathrooms · 500 m²",
     location: "Istog, Kosovo",
@@ -304,23 +314,24 @@ const houses = [
       "img/Download83.jpg",
       "img/Download84.jpg",
       "img/Download85.jpg",
-      "img/download86.jpg"
+      "img/download86.jpg",
     ],
   },
   {
     id: 30,
-        title:"High-Rise Luxury Villa",
+    title: "High-Rise Luxury Villa",
     price: "1 150 000 $",
     features: "3 Bedrooms · 3 Bathrooms · 390 m²",
     location: " Rugovë, Kosovo",
-    description: "Luxurious space designed for easy and happy living. You only live once so live it the best you can.",
+    description:
+      "Luxurious space designed for easy and happy living. You only live once so live it the best you can.",
     images: [
       "img/download17.jpg",
       "img/download24.jpg",
       "img/Download63.jpg",
       "img/Download11.jpg",
       "img/Download38.jpg",
-      "img/download28.jpg"
+      "img/download28.jpg",
     ],
   },
 ];
