@@ -9,348 +9,298 @@
   --radius: 14px;
 }
 
-/* ================= RESET ================= */
-* {
-  box-sizing: border-box;
+/* ================= BASE ================= */
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-/* ================= NAVBAR ================= */
-.navbar {
+/* ================= MICASA NAVBAR (BOOTSTRAP-SAFE) ================= */
+.micasa-navbar{
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 19, 23, 0.95),
-    rgba(15, 19, 23, 0.75)
-  );
+  z-index: 2000;
+  background: linear-gradient(180deg, rgba(15,19,23,.95), rgba(15,19,23,.75));
   border-bottom: 1px solid var(--border);
 }
 
-/* logo majtas | nav + button djathtas */
-.navbar .inner-container {
-  width: min(1200px, 92%);
-  height: 100px;
-  margin-inline: auto;
-
-  display: flex;
-  align-items: center;
+/* IMPORTANT: override bootstrap defaults inside header */
+.micasa-navbar *{
+  box-sizing: border-box;
 }
 
-/* Logo */
-.logo {
-  width: 130px;
-  height: 90px;
-  object-fit: contain;
+.micasa-navbar .inner-container{
+  width:min(1200px, 92%);
+  height:100px;
+  margin-inline:auto;
+
+  display:flex;
+  align-items:center;
 }
 
-/* Push everything else right */
-.navbar .inner-container > div {
-  margin-left: auto;           /* 🔥 kjo i shtyn në të djathtë */
-  display: flex;
-  align-items: center;
-  gap: 26px;
+/* logo */
+.micasa-navbar .logo{
+  width:130px;
+  height:90px;
+  object-fit:contain;
+  display:block;
 }
 
-/* ================= NAV ================= */
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+/* right block */
+.micasa-navbar .inner-container > div{
+  margin-left:auto;
+  margin-right:0 !important;   /* e mposht inline-style */
+  display:flex;
+  align-items:center;
+  gap:26px;
 }
 
-.nav a {
-  color: var(--sub);
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 0;
-  position: relative;
-  transition: color 0.2s ease;
+/* nav */
+.micasa-navbar .nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  margin:0;                 /* bootstrap reset */
+  padding:0;
 }
 
-.nav a:hover,
-.nav a.active {
-  color: var(--text);
+.micasa-navbar .nav a{
+  color:var(--sub);
+  text-decoration:none;
+  font-weight:500;
+  padding:10px 0;
+  position:relative;
+  transition: color .2s ease;
 }
 
-/* underline te active */
-.nav a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -14px;
-  height: 2px;
-  background: #fff;
+.micasa-navbar .nav a:hover,
+.micasa-navbar .nav a.active{
+  color:var(--text);
 }
 
-/* ================= DROPDOWN ================= */
-.nav .dropdown {
-  position: relative;
+.micasa-navbar .nav a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-14px;
+  height:2px;
+  background:#fff;
 }
 
-.nav .dropdown-toggle {
-  cursor: pointer;
-  display: inline-block;
+/* dropdown custom (avoid bootstrap dropdown styles) */
+.micasa-navbar .dropdown{
+  position:relative;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 0;
-  min-width: 140px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 6px 0;
-  display: none;
-  z-index: 2000;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+.micasa-navbar .dropdown-toggle{
+  cursor:pointer;
+  display:inline-block;
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 0.95rem;
-  color: var(--sub);
-  text-decoration: none;
+/* IMPORTANT: use different class name to avoid BS dropdown-menu */
+.micasa-navbar .dropdown-menu{
+  position:absolute;
+  top:calc(100% + 12px);
+  left:0;
+  min-width:140px;
+
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:6px 0;
+
+  display:none;              /* hover shows it */
+  z-index:3000;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+  /* override bootstrap .dropdown-menu */
+  margin:0;
+  transform:none !important;
 }
 
-.dropdown-menu a:hover {
-  background: var(--border);
-  color: var(--text);
+.micasa-navbar .dropdown-menu a{
+  display:block;
+  padding:10px 16px;
+  font-size:.95rem;
+  color:var(--sub);
+  text-decoration:none;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+.micasa-navbar .dropdown-menu a:hover{
+  background:var(--border);
+  color:var(--text);
 }
 
-/* ================= LOGIN BUTTON ================= */
-.btn1 {
-  background: var(--gold);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(198, 166, 100, 0.25);
+.micasa-navbar .dropdown:hover .dropdown-menu{
+  display:block;
 }
 
-.btn1 a {
-  color: #111;
-  text-decoration: none;
+/* login button */
+.micasa-navbar .btn1{
+  background:var(--gold);
+  border:none;
+  padding:10px 20px;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(198,166,100,.25);
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .navbar .inner-container {
-    height: auto;
-    padding: 14px 0;
+.micasa-navbar .btn1 a{
+  color:#111;
+  text-decoration:none;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .micasa-navbar .inner-container{
+    height:auto;
+    padding:14px 0;
+    flex-wrap:wrap;
+    gap:12px;
   }
 
-  .navbar .inner-container > div {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 16px;
+  .micasa-navbar .inner-container > div{
+    width:100%;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:14px;
   }
 
-  .nav {
-    gap: 18px;
-    flex-wrap: wrap;
+  .micasa-navbar .nav{
+    flex-wrap:wrap;
+    gap:18px;
   }
 
-  .nav a.active::after {
-    bottom: -10px;
+  .micasa-navbar .nav a.active::after{
+    bottom:-10px;
   }
 }
 
-.hero {
-  background: linear-gradient(
-    180deg,
-    rgba(15, 19, 23, 0.5),
-    rgba(15, 19, 23, 0.85)
-  );
-  border-radius: 10px;
-  overflow: hidden;
-}
-.hero:hover {
-  transform: scale(0.99);
+/* ================= HERO ================= */
+.hero{
+  height:60vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+
+  background: linear-gradient(180deg, rgba(15,19,23,.5), rgba(15,19,23,.85));
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 10px 20px rgba(192,192,192,.35);
 }
 
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(100px, 4vw, 48px);
-  margin: 0 0 12px;
+.hero h1{
+  font-family:"Playfair Display", serif;
+  font-size: clamp(48px, 7vw, 100px);
+  margin:0 0 12px;
+  color:var(--gold);
 }
 
-.hero p {
-  color: var(--sub);
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin-inline: auto;
+.hero p{
+  color:var(--sub);
+  font-size:1.1rem;
+  max-width:700px;
+  margin:0 auto;
 }
 
-.hero {
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  text-shadow: 0 2px 10px rgba(89, 208, 212, 0.6);
-  border-radius: 25px;
-  box-shadow: 0 10px 20px rgb(192, 192, 192);
-}
-.hero h1 {
-  color: var(--gold) !important;
-}
-.box,
-.box h1,
-.box h3,
-.box p {
-  color: #ffffff !important;
+/* ================= BOXES ================= */
+.boxes{
+  display:flex;
+  gap:85px;
+  margin-top:40px;
+  justify-content:center;
+  padding:0 10px;
+  flex-wrap:wrap; /* ✅ mos u prish në ekrane më të vogla */
 }
 
-.boxes {
-  display: flex;
-  gap: 85px;
-  margin-top: 40px;
-  justify-content: center;
-  padding: 0 10px;
+.box{
+  background:var(--muted);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:0 10px 25px rgba(192,192,192,.25);
+
+  padding:20px 30px;
+  width:380px;   /* ✅ jo 900px, se prishet layout */
 }
 
-.box {
-  background: var(--muted);
-  padding: 20px 40px 05px 30px;
-  border-radius: var(--radius);
-  width: 900px;
-  text-align: top center;
-  font-size: 15px;
-  border: 1px solid var(--border);
-  box-shadow: 0 10px 25px rgb(192, 192, 192);
+.box h1, .box h3, .box p{
+  color:#fff;
 }
 
-.box-img {
-  width: 355px;
-  height: 255px;
-  border-radius: var(--radius);
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto 20px auto;
+.box-img{
+  width:100%;
+  height:220px;
+  border-radius:var(--radius);
+  background-size:cover;
+  background-position:center;
+  margin:0 0 16px;
 }
 
-.box:hover {
-  transform: scale(1.03);
-}
-/* BUTTON VIEW DETAILS */
-.btn {
-  padding: 10px 20px;
-  background: var(--gold);
-  color: #111;
-  border: none;
-  border-radius: var(--radius);
-  font-size: 15px;
-  cursor: pointer;
-  font-weight: 600;
-  display: inline-block;
-  text-decoration: none;
-  margin-top: 10px;
-  transition: 0.3s;
+.box:hover{
+  transform:scale(1.03);
+  transition:.2s ease;
 }
 
-.btn:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
+/* View details button (avoid bootstrap btn conflict) */
+.box a.btn{
+  padding:10px 20px;
+  background:var(--gold);
+  color:#111 !important;
+  border:none;
+  border-radius:var(--radius);
+  font-size:15px;
+  font-weight:600;
+  display:inline-block;
+  text-decoration:none;
+  margin-top:10px;
 }
 
-.box1 .box-img {
-  background-image: url("../img/H1.jpg");
-}
-.box2 .box-img {
-  background-image: url("../img/H2.jpg");
-}
-.box3 .box-img {
-  background-image: url("../img/H3.jpg");
-}
-.box4 .box-img {
-  background-image: url("../img/H6.jpg");
-}
-.box5 .box-img {
-  background-image: url("../img/H7.jpg");
-}
-.box6 .box-img {
-  background-image: url("../img/H8.jpg");
-}
-.box7 .box-img {
-  background-image: url("../img/H9.jpg");
-}
-.box8 .box-img {
-  background-image: url("../img/H10.jpg");
-}
-.box9 .box-img {
-  background-image: url("../img/H11.jpg");
-}
-.box10 .box-img {
-  background-image: url("../img/H16.jpg");
-}
-.box11 .box-img {
-  background-image: url("../img/H17.jpg");
-}
-.box12 .box-img {
-  background-image: url("../img/H12.jpg");
-}
-.box13 .box-img {
-  background-image: url("../img/H13.jpg");
-}
-.box14 .box-img {
-  background-image: url("../img/H14.jpg");
-}
-.box15 .box-img {
-  background-image: url("../img/H15.jpg");
-}
-.footer {
-  margin-top: 70px;
-  padding: 36px 0 60px;
-  color: var(--sub);
-  border-top: 1px solid var(--border);
+.box a.btn:hover{
+  opacity:.9;
+  transform:translateY(-2px);
 }
 
-.footer .cols {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
+/* images */
+.box1 .box-img { background-image:url("../img/H1.jpg"); }
+.box2 .box-img { background-image:url("../img/H2.jpg"); }
+.box3 .box-img { background-image:url("../img/H3.jpg"); }
+.box4 .box-img { background-image:url("../img/H6.jpg"); }
+.box5 .box-img { background-image:url("../img/H7.jpg"); }
+.box6 .box-img { background-image:url("../img/H8.jpg"); }
+.box7 .box-img { background-image:url("../img/H9.jpg"); }
+.box8 .box-img { background-image:url("../img/H10.jpg"); }
+.box9 .box-img { background-image:url("../img/H11.jpg"); }
+.box10 .box-img { background-image:url("../img/H16.jpg"); }
+.box11 .box-img { background-image:url("../img/H17.jpg"); }
+.box12 .box-img { background-image:url("../img/H12.jpg"); }
+.box13 .box-img { background-image:url("../img/H13.jpg"); }
+.box14 .box-img { background-image:url("../img/H14.jpg"); }
+.box15 .box-img { background-image:url("../img/H15.jpg"); }
+
+/* ================= FOOTER ================= */
+.footer{
+  border-top:1px solid var(--border);
 }
 
-.footer a {
-  color: var(--sub);
-  text-decoration: none;
+.footer a{
+  color:var(--sub);
+  text-decoration:none;
 }
 
-.footer a:hover {
-  color: var(--text);
+.footer a:hover{
+  color:var(--text);
 }
 
-.footer .cols div {
-  min-width: 200px;
-}
-
-.footer h4 {
-  margin: 0 0 10px;
-}
-
-.footer p {
-  margin: 12px 0 0;
-  max-width: 380px;
+.footer-bottom{
+  border-top:1px solid var(--border);
 }
