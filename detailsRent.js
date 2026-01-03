@@ -501,7 +501,6 @@ if (!house) {
   throw new Error("House not found");
 }
 
-// ===== MBUSH FAQEN =====
 document.getElementById("title").textContent = house.title;
 document.getElementById("price").textContent = house.price;
 document.getElementById("features").textContent = house.features;
