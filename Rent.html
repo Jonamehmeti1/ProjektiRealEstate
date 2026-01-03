@@ -14,22 +14,30 @@
   </head>
 
   <body>
-    <header class="navbar">
-      <div class="inner-container">
-        <img class="logo" src="img/logo.png" alt="Logo" />
+  <header class="navbar">
+  <div class="inner-container">
+    <a href="Home.html"><img class="logo" src="logo.png" alt="Logo"></a>
 
-        <div style="display: flex; align-items: center; margin-right: 2%">
-          <nav class="nav">
-            <a href="Home.html">Home</a>
-            <a href="AboutUs.html">About Us</a>
-            <a href="Services.html" class="active">Services</a>
-          </nav>
-          <button class="btn1">
-            <a href="LoginRegister.html">Log In</a>
-          </button>
+    <div style="display:flex; align-items:center; margin-right:2%;">
+      <nav class="nav">
+        <a href="Home.html" >Home</a>
+        <a href="AboutUs.html">About Us</a>
+
+        <div class="dropdown">
+         <a href="#" class="dropdown-toggle active">Services</a>
+          <div class="dropdown-menu">
+            <a href="Rent.html">Rent</a>
+            <a href="Sale.html">Sale</a>
+          </div>
         </div>
-      </div>
-    </header>
+      </nav>
+
+      <button class="btn1">
+        <a href="LoginRegister.html">Log In</a>
+      </button>
+    </div>
+  </div>
+</header>
 
         <section class="hero">
       <div class="hero-content">

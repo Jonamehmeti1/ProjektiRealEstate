@@ -1,65 +1,83 @@
+/* ================= ROOT ================= */
 :root {
-  --bg: #0f1317; /*ngjyra e background*/
-  --muted: #1a2027; /*ngjyra e cards*/
-  --text: #c6a664; /*ngjyra e pare 1 shkrimeve*/
-  --sub: #b8c0cc; /*ngjyra e linqeve e shkrimeve*/
-  --gold: #c6a664; /*ngjyra e butoneve*/
-  --border: #2a323d; /*ngjyra e bordeers perreth */
+  --bg: #0f1317;
+  --muted: #1a2027;
+  --text: #e9edf1;
+  --sub: #b8c0cc;
+  --gold: #c6a664;
+  --border: #2a323d;
   --radius: 14px;
 }
 
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.1;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-.container {
-  width: min(1200px, 92%);
-  margin-inline: auto;
-}
-
+/* ================= NAVBAR ================= */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: linear-gradient(
     180deg,
-    rgba(15, 19, 23, 0.9),
-    rgba(15, 19, 23, 0.6)
+    rgba(15, 19, 23, 0.95),
+    rgba(15, 19, 23, 0.75)
   );
   border-bottom: 1px solid var(--border);
 }
 
+/* logo majtas | nav + button djathtas */
 .navbar .inner-container {
-  width: 100%;
+  width: min(1200px, 92%);
+  height: 100px;
+  margin-inline: auto;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
+/* Logo */
 .logo {
   width: 130px;
   height: 90px;
+  object-fit: contain;
 }
 
+/* Push everything else right */
+.navbar .inner-container > div {
+  margin-left: auto;           /* 🔥 kjo i shtyn në të djathtë */
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+/* ================= NAV ================= */
 .nav {
   display: flex;
-  gap: 26px;
+  align-items: center;
+  gap: 28px;
 }
 
 .nav a {
   color: var(--sub);
   text-decoration: none;
   font-weight: 500;
-  padding: 10px 20px;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
 .nav a:hover,
@@ -67,18 +85,95 @@ body {
   color: var(--text);
 }
 
+/* underline te active */
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 2px;
+  background: #fff;
+}
+
+/* ================= DROPDOWN ================= */
+.nav .dropdown {
+  position: relative;
+}
+
+.nav .dropdown-toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 140px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px 0;
+  display: none;
+  z-index: 2000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  color: var(--sub);
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ================= LOGIN BUTTON ================= */
 .btn1 {
   background: var(--gold);
-  color: #111;
   border: none;
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 12px;
   font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(198, 166, 100, 0.25);
 }
 
 .btn1 a {
-  text-decoration: none;
   color: #111;
+  text-decoration: none;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .navbar .inner-container {
+    height: auto;
+    padding: 14px 0;
+  }
+
+  .navbar .inner-container > div {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+
+  .nav {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .nav a.active::after {
+    bottom: -10px;
+  }
 }
 
 .hero {
