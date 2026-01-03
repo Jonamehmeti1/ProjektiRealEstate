@@ -267,11 +267,12 @@ const houses = [
     location: "Deçan, Kosovo",
     description: "Lakeview Villa ready to calm your mind.",
     images: [
-      "img/H11.jpg",
-      "img/H12.jpg",
-      "img/H13.jpg",
-      "img/H14.jpg",
-      "img/H15.jpg",
+      "img/download68.jpg",
+      "img/download69.jpg",
+      "img/download70.jpg",
+      "img/Download71.jpg",
+      "img/download72.jpg",
+      "img/download73.jpg"
     ],
   },
   {
@@ -282,11 +283,12 @@ const houses = [
     location: "Arllat, Kosovo",
     description: "A peaceful and well-kept home. Get a place where your heart feels free.",
     images: [
-      "img/H1.jpg",
-      "img/H2.jpg",
-      "img/H3.jpg",
-      "img/H4.jpg",
-      "img/H5.jpg",
+      "img/download80.jpg",
+      "img/download75.jpg",
+      "img/Download76.jpg",
+      "img/Download77.jpg",
+      "img/Download78.jpg",
+      "img/download79.jpg"
     ],
   },
   {
@@ -297,11 +299,12 @@ const houses = [
     location: "Istog, Kosovo",
     description: "Cozy home available for sale.",
     images: [
-      "img/H6.jpg",
-      "img/H7.jpg",
-      "img/H8.jpg",
-      "img/H9.jpg",
-      "img/H10.jpg",
+      "img/download81.jpg",
+      "img/download82.jpg",
+      "img/Download83.jpg",
+      "img/Download84.jpg",
+      "img/Download85.jpg",
+      "img/download86.jpg"
     ],
   },
   {
@@ -312,11 +315,12 @@ const houses = [
     location: " Rugovë, Kosovo",
     description: "Luxurious space designed for easy and happy living. You only live once so live it the best you can.",
     images: [
-      "img/H11.jpg",
-      "img/H12.jpg",
-      "img/H13.jpg",
-      "img/H14.jpg",
-      "img/H15.jpg",
+      "img/download17.jpg",
+      "img/download24.jpg",
+      "img/Download63.jpg",
+      "img/Download11.jpg",
+      "img/Download38.jpg",
+      "img/download28.jpg"
     ],
   },
 ];
